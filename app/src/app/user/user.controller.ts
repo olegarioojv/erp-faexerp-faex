@@ -1,11 +1,11 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
 import { UserService } from "./user.service";
 import { CreateUsersDto } from "./dto/create-users.dto";
 import { UpdateUserDto } from "./dto/update-users.dto";
 
 // Aqui estamos criando o controlador para usuários
 // Controlador é como a porta de entrada da API para as requisições
-@Controller('user')
+@Controller('users')
 export class UserController {
     
     // Injetamos o UserService para delegar a lógica de negócio
@@ -19,7 +19,7 @@ export class UserController {
 
     // Rota GET /user/:id → retorna um usuário específico pelo ID
     @Get(':id')
-    findOne(@Param('id') id: number) {
+    findOne(@Param('id', ParseIntPipe) id: number) {
         return this.userService.findOne(id);
     }
 
@@ -33,13 +33,13 @@ export class UserController {
     // Rota PUT /user/:id → atualiza um usuário pelo ID
     // @Body() pega os dados enviados para atualização
     @Put(':id')
-    update(@Param('id') id:number, @Body() updateUserDto: UpdateUserDto) {
+    update(@Param('id', ParseIntPipe) id:number, @Body() updateUserDto: UpdateUserDto) {
         return this.userService.update(id, updateUserDto);
     }
 
     // Rota DELETE /user/:id → deleta um usuário pelo ID
     @Delete(':id')
-    delete(@Param('id') id:number) {
+        delete(@Param('id', ParseIntPipe) id: number) {
         return this.userService.delete(id);
     }
 }

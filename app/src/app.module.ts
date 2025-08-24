@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserModule } from './user/user.module';
-import { ProductModule } from './product/product.module';
+import { UserModule } from './app/user/user.module';
+import { ProductModule } from './app/product/product.module';
 
 // O AppModule é o módulo principal da aplicação
 // Ele organiza e conecta todos os outros módulos, controllers e services
