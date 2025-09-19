@@ -53,7 +53,6 @@ prisma/
 
    Exemplo de configuração do arquivo `.env`:
    ```
-   # ...env
    DATABASE_URL="mysql://usuario:senha@localhost:3306/nome_do_banco"
    JWT_SECRET="sua_chave_secreta"
    PORT=3000
