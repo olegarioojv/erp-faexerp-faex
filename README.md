@@ -46,13 +46,11 @@ prisma/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/olegarioojv/erp-faexerp-faex.git
-   cd seu-repo
+   cd app
    ```
 
-2. Copie e configure o arquivo de variáveis de ambiente:
-   ```bash
-   cp .env.example .env
-   ```
+2. Configuração do arquivo `.env`:
+
    Exemplo de configuração do arquivo `.env`:
    ```
    # ...env
