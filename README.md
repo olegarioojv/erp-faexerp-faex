@@ -86,12 +86,3 @@ prisma/
 Acesse em: [http://localhost:3000](http://localhost:3000)
 
 ---
-
-## 🧪 Testes
-
-```bash
-yarn test
-# ou
-npm test
-```
-
